@@ -22,7 +22,7 @@
 npm i react-native-expo-device-orientation
 ```
 
-** Use In EXPO App **
+## **Use In EXPO App**
 
 1. Install the react-native-expo-device-orientation package.
 
@@ -38,7 +38,7 @@ npm i react-native-expo-device-orientation
 
 ### Example Code
 
-`
+```
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { useDeviceOrientation } from 'react-native-expo-device-orientation'; // importing
@@ -65,9 +65,9 @@ marginTop: 20,
 fontSize: 18,
 },
 });
-`
+```
 
-** Use In bare REACT-NATIVE App **
+## **Use In bare REACT-NATIVE App**
 
 1. Install the react-native-expo-device-orientation package.
 
@@ -79,23 +79,19 @@ npm i react-native-expo-device-orientation
    `import { useDeviceOrientation } from 'react-native-expo-device-orientation';`
 
 3. To install and use Expo modules in bare REACT-NATIVE App , the easiest way to get up and running is with the install-expo-modules command.
-   `npx install-expo-modules@latest`
+
+   ```sh
+   npx install-expo-modules@latest
+   ```
 
 4. Use in your project
    `const orientation = useDeviceOrientation();`
 
-info: Your project should work perfectly, if not working properly try to reopen the project. If still not working try manual installing of [Expo modules in React Native 0.74](https://docs.expo.dev/bare/installing-expo-modules/)
+**info**: Your project should work perfectly, if not working properly try to reopen the project. If still not working try manual installing of [Expo modules in React Native 0.74](https://docs.expo.dev/bare/installing-expo-modules/)
 
 ### Example Code
 
-`
-/\*\*
-
-- Sample React Native App
-- https://github.com/facebook/react-native
--
-- @format
-  \*/
+```
 
 import React from 'react';
 
@@ -120,9 +116,9 @@ return (
 }
 
 export default App;
-`
+```
 
-- Feel free to contribute \*
+- Feel free to contribute
 
 ### [GitHub](https://github.com/p369m/react-native-expo-device-orientation)
 
