@@ -15,5 +15,9 @@
   "devDependencies": {
     "@types/react": "^18.3.3",
     "typescript": "^5.5.3"
-  }
+  },
+  "repository": {
+  "type": "git",
+  "url": "https://github.com/your-user/repo-url.git"
+}
 }
