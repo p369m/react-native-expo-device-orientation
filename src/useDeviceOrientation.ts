@@ -51,15 +51,26 @@ export default function useDeviceOrientation(): number {
 
   const getOrientation = (data: AccelerometerMeasurement) => {
     const { x, y } = data;
+
     if (Math.abs(x) > Math.abs(y)) {
       if (x > 0) {
-        setOrientation(90);
+       setOrientation(90);
+     
       } else {
         setOrientation(-90);
+    
       }
     } else {
-      setOrientation(180);
+      if (y > 0) {
+        setOrientation(0);
+     
+      } else {
+        setOrientation(180);
+       
+      }
     }
+
+    
   };
 
   return orientation;

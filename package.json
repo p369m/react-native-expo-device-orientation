@@ -1,6 +1,6 @@
 {
   "name": "react-native-expo-device-orientation",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This package helps you to get the device's current orientation data using the Accelerometer sensor.",
   "main": "index.ts",
   "types": "index.ts",
