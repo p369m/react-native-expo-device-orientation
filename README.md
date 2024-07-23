@@ -12,5 +12,5 @@ A React Native Expo package for detecting device orientation changes and providi
 ## Installation
 
 ```sh
-npm react-native-expo-device-orientation
+npm i react-native-expo-device-orientation
 ```
