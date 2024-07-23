@@ -28,7 +28,7 @@ npm i react-native-expo-device-orientation
 
 ## **Use In EXPO App**
 
-1. Install the react-native-expo-device-orientation package.\
+1. Install the react-native-expo-device-orientation package.
 
 ```sh
 npm i react-native-expo-device-orientation
@@ -73,7 +73,7 @@ fontSize: 18,
 
 ## **Use In bare REACT-NATIVE App**
 
-1. Install the react-native-expo-device-orientation package.\
+1. Install the react-native-expo-device-orientation package.
 
 ```sh
 npm i react-native-expo-device-orientation
