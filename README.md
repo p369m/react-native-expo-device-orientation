@@ -82,7 +82,7 @@ npm i react-native-expo-device-orientation
 2. Import in your project.\
    `import { useDeviceOrientation } from 'react-native-expo-device-orientation';`
 
-3. To install and use Expo modules in bare REACT-NATIVE App , the easiest way to get up and running is with the install-expo-modules command.\
+3. To install and use Expo modules in bare REACT-NATIVE App , the easiest way to get up and running is with the install-expo-modules command.
 
    ```sh
    npx install-expo-modules@latest
@@ -91,7 +91,7 @@ npm i react-native-expo-device-orientation
 4. Use in your project\
    `const orientation = useDeviceOrientation();`
 
-**info**: Your project should work perfectly, if not working properly try to reopen the project. If still not working try manual installing of [Expo modules in React Native 0.74](https://docs.expo.dev/bare/installing-expo-modules/). Manually repeating step 3.\
+**info**: Your project should work perfectly, if not working properly try to reopen the project. If still not working try manual installing of [Expo modules in React Native 0.74](https://docs.expo.dev/bare/installing-expo-modules/). Manually repeating step 3.
 
 ### Example Code
 
