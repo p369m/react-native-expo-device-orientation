@@ -2,6 +2,10 @@
 
 ### A React Native Expo package for detecting device orientation changes and providing the current orientation of the device.
 
+### It provide the orientation data using Accelerometer sensor of your device.
+
+### It does not depend on device's screen orientation, you can get device orientation data without rotating your app screen.
+
 ## Features
 
 - Detects device orientation changes.
@@ -24,16 +28,16 @@ npm i react-native-expo-device-orientation
 
 ## **Use In EXPO App**
 
-1. Install the react-native-expo-device-orientation package.
+1. Install the react-native-expo-device-orientation package.\
 
 ```sh
 npm i react-native-expo-device-orientation
 ```
 
-2. Import in your project.
+2. Import in your project.\
    `import { useDeviceOrientation } from 'react-native-expo-device-orientation';`
 
-3. Use in your project
+3. Use in your project\
    `const orientation = useDeviceOrientation();`
 
 ### Example Code
@@ -69,25 +73,25 @@ fontSize: 18,
 
 ## **Use In bare REACT-NATIVE App**
 
-1. Install the react-native-expo-device-orientation package.
+1. Install the react-native-expo-device-orientation package.\
 
 ```sh
 npm i react-native-expo-device-orientation
 ```
 
-2. Import in your project.
+2. Import in your project.\
    `import { useDeviceOrientation } from 'react-native-expo-device-orientation';`
 
-3. To install and use Expo modules in bare REACT-NATIVE App , the easiest way to get up and running is with the install-expo-modules command.
+3. To install and use Expo modules in bare REACT-NATIVE App , the easiest way to get up and running is with the install-expo-modules command.\
 
    ```sh
    npx install-expo-modules@latest
    ```
 
-4. Use in your project
+4. Use in your project\
    `const orientation = useDeviceOrientation();`
 
-**info**: Your project should work perfectly, if not working properly try to reopen the project. If still not working try manual installing of [Expo modules in React Native 0.74](https://docs.expo.dev/bare/installing-expo-modules/)
+**info**: Your project should work perfectly, if not working properly try to reopen the project. If still not working try manual installing of [Expo modules in React Native 0.74](https://docs.expo.dev/bare/installing-expo-modules/). Manually repeating step 3.\
 
 ### Example Code
 
@@ -110,7 +114,7 @@ const ori=useDeviceOrientation();
 
 return (
 <View>
-<Text> Orientation = {ori} </Text>
+<Text> Orientation = {ori} </Text> // 0° = PORTRAIT_UP , 90° = LANDSCAPE_LEFT , -90° = LANDSCAPE_RIGHT , 180° = PORTRAIT_DOWN
 </View>
 );
 }
