@@ -18,7 +18,9 @@
 
 ## Installation
 
-> npm i react-native-expo-device-orientation
+```sh
+npm i react-native-expo-device-orientation
+```
 
 ** Use In EXPO App **
 
