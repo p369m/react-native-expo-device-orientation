@@ -1,11 +1,12 @@
 {
   "name": "react-native-expo-device-orientation",
-  "version": "1.0.4",
+  "version": "1.0.7",
   "description": "This package helps you to get the device's current orientation data using the Accelerometer sensor.",
   "main": "index.ts",
   "types": "index.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "release": "git checkout main && git merge contrib-testing && npm version patch && npm publish"
   },
   "author": "pm369",
   "license": "MIT",
@@ -19,10 +20,18 @@
   "keywords": [
     "device-orientation",
     "orientation",
-    "accelerometer","PORTRAIT_UP","LANDSCAPE_LEFT","LANDSCAPE_RIGHT","PORTRAIT_DOWN","react-native-expo-device-orientation"
+    "accelerometer",
+    "PORTRAIT_UP",
+    "LANDSCAPE_LEFT",
+    "LANDSCAPE_RIGHT",
+    "PORTRAIT_DOWN",
+    "react-native-expo-device-orientation"
   ],
   "repository": {
-  "type": "git",
-  "url": "https://github.com/p369m/react-native-expo-device-orientation.git"
-}
+    "type": "git",
+    "url": "https://github.com/p369m/react-native-expo-device-orientation.git"
+  },
+  "branches": {
+    "contrib": "contrib-testing"
+  }
 }
