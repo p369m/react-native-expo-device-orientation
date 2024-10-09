@@ -7,12 +7,16 @@ type AccelerometerData = {
   z: number;
 };
 
-export default function useDeviceOrientation(): number {
+interface UseDeviceOrientationProps {
+  accelerometerUpdateInterval?: number;
+}
+
+export default function useDeviceOrientation({ accelerometerUpdateInterval = 1000 }: UseDeviceOrientationProps): number {
   const [{ x, y, z }, setData] = useState<AccelerometerData>({ x: 0, y: 0, z: 0 });
   const [subscription, setSubscription] = useState<any>(null);
   const [orientation, setOrientation] = useState<number>(0);
 
-  const _slow = () => Accelerometer.setUpdateInterval(1000);
+  const _slow = () => Accelerometer.setUpdateInterval(accelerometerUpdateInterval);
 
   const _subscribe = () => {
     setSubscription(
