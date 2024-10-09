@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import { Accelerometer, AccelerometerMeasurement } from 'expo-sensors';
+import { useState, useEffect } from "react";
+import { Accelerometer, AccelerometerMeasurement } from "expo-sensors";
 
 type AccelerometerData = {
   x: number;
@@ -8,15 +8,24 @@ type AccelerometerData = {
 };
 
 interface UseDeviceOrientationProps {
-  accelerometerUpdateInterval?: number;
+  accelerometerUpdateInterval?: number; // Optional prop
 }
 
-export default function useDeviceOrientation({ accelerometerUpdateInterval = 1000 }: UseDeviceOrientationProps): number {
-  const [{ x, y, z }, setData] = useState<AccelerometerData>({ x: 0, y: 0, z: 0 });
+export default function useDeviceOrientation({
+  accelerometerUpdateInterval,
+}: UseDeviceOrientationProps = {}): number {
+  const [{ x, y, z }, setData] = useState<AccelerometerData>({
+    x: 0,
+    y: 0,
+    z: 0,
+  });
   const [subscription, setSubscription] = useState<any>(null);
   const [orientation, setOrientation] = useState<number>(0);
 
-  const _slow = () => Accelerometer.setUpdateInterval(accelerometerUpdateInterval);
+  // Set default interval if not provided
+  const updateInterval = accelerometerUpdateInterval ?? 1000;
+
+  const _rate = () => Accelerometer.setUpdateInterval(updateInterval);
 
   const _subscribe = () => {
     setSubscription(
@@ -39,7 +48,7 @@ export default function useDeviceOrientation({ accelerometerUpdateInterval = 100
       try {
         const isAvailable = await Accelerometer.isAvailableAsync();
         if (isAvailable) {
-          _slow();
+          _rate();
           _subscribe();
         } else {
           console.error("Accelerometer is not available.");
@@ -57,24 +66,10 @@ export default function useDeviceOrientation({ accelerometerUpdateInterval = 100
     const { x, y } = data;
 
     if (Math.abs(x) > Math.abs(y)) {
-      if (x > 0) {
-       setOrientation(90);
-     
-      } else {
-        setOrientation(-90);
-    
-      }
+      setOrientation(x > 0 ? 90 : -90);
     } else {
-      if (y > 0) {
-        setOrientation(0);
-     
-      } else {
-        setOrientation(180);
-       
-      }
+      setOrientation(y > 0 ? 0 : 180);
     }
-
-    
   };
 
   return orientation;

@@ -50,6 +50,19 @@ import { useDeviceOrientation } from 'react-native-expo-device-orientation'; // 
 export default function App() {
 const orientation = useDeviceOrientation(); // getting orientation data
 
+// You can customize the accelerometer update interval (in milliseconds)
+// by passing an object to useDeviceOrientation. The default is 1000ms (1 second).
+// Example:
+// const orientation = useDeviceOrientation({
+//   accelerometerUpdateInterval: 100, // sets update interval to 100ms
+// });
+//
+// Note: Starting from Android 12 (API level 31), the system has a 200ms limit for sensor updates.
+// If you need an update interval less than 200ms, you should:
+// - Add `android.permission.HIGH_SAMPLING_RATE_SENSORS` to the app.json permissions field.
+// - If you are using the bare workflow, add <uses-permission android:name="android.permission.HIGH_SAMPLING_RATE_SENSORS"/>
+//   to your AndroidManifest.xml.
+
 return (
 <View style={styles.container}>
 <Text style={styles.orientationText}>Orientation: {orientation}°</Text> // 0° = PORTRAIT_UP , 90° = LANDSCAPE_LEFT , -90° = LANDSCAPE_RIGHT , 180° = PORTRAIT_DOWN
@@ -123,6 +136,8 @@ export default App;
 ```
 
 - Feel free to contribute
+
+**_NOTE_**: **Submit a Pull Request** to the `contrib-testing` branch of the main repository. All contributions will be reviewed and tested on the contrib-testing branch before being merged into main
 
 ### [GitHub](https://github.com/p369m/react-native-expo-device-orientation)
 
