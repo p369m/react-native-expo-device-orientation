@@ -6,6 +6,10 @@
 
 ### It does not depend on device's screen orientation, you can get device orientation data without rotating your app screen.
 
+## Documentation
+
+You can access the full documentation for this package [here](https://softwarefarm.in/opens/react-native-expo-device-orientation/).
+
 ## Features
 
 - Detects device orientation changes.
